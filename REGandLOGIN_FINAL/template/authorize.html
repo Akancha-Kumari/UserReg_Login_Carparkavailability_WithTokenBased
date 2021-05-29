@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../Content/Style.css" rel="stylesheet" />
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        body h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2><strong>Authorized User</strong></h2>
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td>{{data}}</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td>{{data1}}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{data2}}</td>
+        </tr>
+        <tr>
+            <td>Contact No:</td>
+            <td>{{data3}}</td>
+        </tr>
+        <tr>
+            <td>Logged On:</td>
+            <td>{{data4}}</td>
+        </tr>
+    </table>
+
+</body>
+</html>

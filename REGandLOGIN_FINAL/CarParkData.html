@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="ListCtrl">
+        <div ng-repeat="parkdata in carparkdata">
+            <h4>Carpark Info</h4>
+            <div ng-repeat="carparkinfo in parkdata.carpark_info">
+                <div>
+                    <h5>Total Lots: {{carparkinfo.total_lots}}</h5>
+                    <h5>Lot Type: {{carparkinfo.lot_type}}</h5>
+                    <h5>Lots available: {{carparkinfo.lots_available}}</h5>
+                </div>
+            </div>
+            <h4>Carpark Number : {{parkdata.carpark_number}}</h4>
+            <h4>Updated datetime : {{parkdata.update_datetime}}</h4>
+            <hr />
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+        <script src="Scripts/myApp.js"></script>
+    </div>
+</body>
+</html>

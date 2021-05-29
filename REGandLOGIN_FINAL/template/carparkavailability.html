@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular JS app</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="../Content/Style.css" rel="stylesheet" />
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ff7f503d;
+        }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+        #nestedtable {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+    <h2><strong>Car Parking Availabilty List</strong></h2>
+    <div ng-controller="carparkavailabilityController">
+        <!--<div ng-repeat="parkdata in carparkdata">
+            <h4>Carpark Number : {{parkdata.carpark_number}}</h4>
+            <h4>Carpark Info</h4>
+            <div ng-repeat="carparkinfo in parkdata.carpark_info">
+                <div>
+                    <h5>Total Lots: {{carparkinfo.total_lots}}</h5>
+                    <h5>Lot Type: {{carparkinfo.lot_type}}</h5>
+                    <h5>Lots available: {{carparkinfo.lots_available}}</h5>
+                </div>
+            </div>
+
+            <h4>Last Updated : {{parkdata.update_datetime}}</h4>
+            <hr />
+        </div>-->
+        <div ng-repeat="parkdata in carparkdata">
+            <div ng-repeat="carparkinfo in parkdata.carpark_info">
+                <table id="customers">
+                    <tr>
+                        <td> <strong>Carpark Info</strong></td>
+                        <td>
+                            <table id="nestedtable">
+                                <tr>
+                                    <td> Total Lots</td>
+                                    <td>{{carparkinfo.total_lots}}</td>
+                                </tr>
+                                <tr>
+                                    <td> Lot Type</td>
+                                    <td> {{carparkinfo.lot_type}} </td>
+                                </tr>
+                                <tr>
+                                    <td> Lots available</td>
+                                    <td>{{carparkinfo.lots_available}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <strong>Carpark Number</strong> </td>
+                        <td> {{parkdata.carpark_number}}</td>
+                    </tr>
+                    <tr>
+                        <td> <strong>Last Updated</strong> </td>
+                        <td> {{parkdata.update_datetime}}</td>
+                    </tr>
+                </table>
+                <br />
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script src="Scripts/myApp.js"></script>
+</body>
+</html>

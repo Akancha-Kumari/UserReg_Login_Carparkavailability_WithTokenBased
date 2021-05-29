@@ -1,0 +1,11 @@
+﻿.container.body-content {
+    box-sizing: border-box;
+    width: 50%;
+    border: 5px solid #000000;
+}
+
+html {
+    margin-top: 5%;
+}
+
+
