@@ -38,7 +38,7 @@ GO
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Note: 
-1) ASP.Net API with AngularJS with Token Based Authentication
+1) ASP.Net Web API with AngularJS with Token Based Authentication
 2) Please replace your database connection in the project by adding ADO.NET Entity Data Model
 3) Click build to manage/load all missing nuget packages
 4) After adding project Go to Index.html and run the application
